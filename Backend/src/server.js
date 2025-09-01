@@ -4,6 +4,7 @@ import { connectDB } from './config/db.js';
 import dotenv from 'dotenv';
 import rateLimiter from './middleware/rateLimiter.js';
 import { connect } from 'mongoose';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -16,6 +17,9 @@ const PORT = process.env.PORT || 5001;
 // connectDB();
 
 //middleware
+app.use(cors(
+{origin:'http://localhost:5173'} // frontend er url diye dibo(jehetu cors er problem ashtese
+))
 app.use(express.json());
 app.use(rateLimiter);
 

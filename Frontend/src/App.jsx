@@ -9,7 +9,6 @@ import NoteDetailPage from './pages/NoteDetailPage.jsx'
 const App = () => {
   return (
     <div data-theme="luxury">
-    <button className='btn btn-primary'>Button</button>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/create' element={<CreatePage />} />
